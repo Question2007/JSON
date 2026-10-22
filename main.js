@@ -1,10 +1,11 @@
 const API_URL = "https://retoolapi.dev/zIFuAm/data";
 
+const adatok = []
 
 async function init() {
     const response = await fetch(API_URL);
     
-    const adatok = await response.json();
+    adatok = await response.json();
     
     const tablazat = document.getElementById("tablazat");
 
@@ -25,6 +26,7 @@ async function init() {
         tablazat.appendChild(tr)
 
         /*tr.style.border = "2px solid #2b2b2b";*/
+
 
         if (auto.szin == "fekete") {
             tr.style.backgroundColor = "#2b2b2b";
