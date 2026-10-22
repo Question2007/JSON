@@ -1,6 +1,6 @@
 const API_URL = "https://retoolapi.dev/zIFuAm/data";
 
-const adatok = []
+let adatok = []
 
 async function init() {
     const response = await fetch(API_URL);
